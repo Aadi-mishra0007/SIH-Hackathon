@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #08090d;
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.25);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.45);
+  }
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .dark-micro-grid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .light-micro-grid {
+    background-image: radial-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+/* Leaflet Dark Mode Overrides for Modern Minimal Aesthetics */
+.dark .leaflet-popup-content-wrapper {
+  background: #0f121a !important;
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important;
+}
+.dark .leaflet-popup-tip {
+  background: #0f121a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.dark .leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.5 !important;
+}
+.dark .leaflet-container {
+  background: #08090d !important;
+}
+.dark .leaflet-control-zoom a {
+  background-color: #0f121a !important;
+  color: #e2e8f0 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.dark .leaflet-control-zoom a:hover {
+  background-color: #161b26 !important;
+  color: #38bdf8 !important;
+}
+.dark .leaflet-control-attribution {
+  background: rgba(15, 18, 26, 0.75) !important;
+  color: #64748b !important;
+  backdrop-filter: blur(8px) !important;
+}
+.dark .leaflet-control-attribution a {
+  color: #94a3b8 !important;
+}
